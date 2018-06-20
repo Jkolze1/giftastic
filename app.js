@@ -24,6 +24,7 @@ $(document).ready(function(){
         $("#animalbutton").append("<button type= 'button' onclick= 'searchGif(\"" + topicArray[i] + "\")' class='btn' value='" + topicArray[i] + "'> " + topicArray[i] + "</button>");
     }
 });
+
  //button clicked function
  function animalbuttonClicked(){
 var userInput=$('#animalInput').val();
@@ -33,7 +34,7 @@ searchGif(userInput);
 //submit button
 function submitbuttonClicked() {
     var userInput = $('#animalInput').val();
-
+//if users adds input, then a button appears
     if (userInput) {
         $('#animalbutton').append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' value=' " + userInput + "'> " + userInput + " </button>");
     }
@@ -46,7 +47,8 @@ function displayGif(response){
 var image = rating + '<img src= " ' + response.data[i].images.fixed_height_still.url +
     '" data-still=" ' + response.data[i].images.fixed_height_still.url +
     ' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="still" class="gif" style= "width:250px; height:250px">';
-//shows image
+
+    //shows image
     image = '<div class="col-md-4">' + image + "</div>";
     $('#animals').append(image);
 }
