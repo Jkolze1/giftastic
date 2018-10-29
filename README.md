@@ -4,5 +4,4 @@ In this assignment I used the GIPHY API to make a dynamic web page that populate
 <br>
 https://jkolze.github.io/giftastic-master/index
 <br>
-<br>
 ![Home](/img/pic.png 'Screenshot')
